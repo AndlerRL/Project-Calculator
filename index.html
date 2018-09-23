@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body onload="startCal()">
+  <div class="fondo">
+    <div class="titulo-container">
+      <h1>¡Don't Loose <span>the count!</span></h1>
+    </div>
+
+    <div class="notas-container">
+      <h2>Your scratchpad...</h2>
+      <textarea class="nota-input" placeholder="Write here..."></textarea>
+    </div>
+
+
+
+    <!--|||||||||||||||||||||||||||||||||||||||| 
+        PARTE HTML DE LA CALCULADORA... VERIFICA
+    ||||||||||||||||||||||||||||||||||||||||||||-->
+
+    <div id="calculadoraFondo">
+      <div class="pantalla">
+        <span id="display"></span>
+      </div>
+
+      <div class="teclado">
+        <img src="image/ON.png" alt="On" class="tecla" id="on" onclick="calculator.onKey(),pressing(this)"/>
+        <img src="image/sign.png" alt="signo" class="tecla" id="sign" onclick="calculator.signKey(),pressing(this)"/>
+        <img src="image/raiz.png" alt="raiz" class="tecla" id="raiz" onclick="calculator.rootKey(),pressing(this)"/>
+        <img src="image/dividido.png" alt="dividido" class="tecla divide" id="dividido" onclick="calculator.divideKey(),pressing(this)"/>
+
+        <img src="image/7.png" alt="7" class="tecla" id="7" onclick="calculator.key7(),pressing(this)"/>
+        <img src="image/8.png" alt="8" class="tecla" id="8" onclick="calculator.key8(),pressing(this)"/>
+        <img src="image/9.png" alt="9" class="tecla" id="9" onclick="calculator.key9(),pressing(this)"/>
+        <img src="image/por.png" alt="por" class="tecla multiplica" id="por" onclick="calculator.perKey(),pressing(this)"/>
+
+        <img src="image/4.png" alt="4" class="tecla" id="4" onclick="calculator.key4(),pressing(this)"/>
+        <img src="image/5.png" alt="5" class="tecla" id="5" onclick="calculator.key5(),pressing(this)"/>
+        <img src="image/6.png" alt="6" class="tecla" id="6" onclick="calculator.key6(),pressing(this)"/>
+        <img src="image/menos.png" alt="menos" class="tecla resta" id="menos" onclick="calculator.minusKey(),pressing(this)"/>
+
+        <div class="row">
+          <div class="col1">
+            <img src="image/1.png" alt="1" class="tecla" id="1" onclick="calculator.key1(),pressingCol1(this)"/>
+            <img src="image/2.png" alt="2" class="tecla" id="2" onclick="calculator.key2(),pressingCol1(this)"/>
+            <img src="image/3.png" alt="3" class="tecla" id="3" onclick="calculator.key3(),pressingCol1(this)"/>
+
+            <img src="image/0.png" alt="0" class="tecla" id="0" onclick="calculator.key0(),pressingCol1(this)"/>
+            <img src="image/punto.png" alt="punto" class="tecla" id="punto" onclick="calculator.dotKey(),pressingCol1(this)"/>
+            <img src="image/igual.png" alt="igual" class="tecla" id="igual" onclick="calculator.equalKey(),pressingCol1(this)"/>
+          </div>
+          <div class="col2">
+            <img src="image/mas.png" alt="mas" class="tecla suma" id="mas" onclick="calculator.plusKey(),pressingPlus(this)"/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--||||||||||||||||||||||||||||||||||||||
+        FIN DE LA PARTE HTML DE LA CALCULADORA
+    ||||||||||||||||||||||||||||||||||||||||||-->
+
+
+    <div class="container-libreta">
+      <div class="libreta">
+        <div class="contenido-ingresos">
+          <h3>Incomes</h3>
+          <ul>
+            <li><span>Salary: </span>$1800.00</li>
+            <li><span>Bonifications: </span>$425.00</li>
+          </ul>
+        </div>
+        <div class="contenido-egresos">
+          <h3>Expenditures</h3>
+          <ul>
+            <li><span>Rent: </span>$370.00</li>
+            <li><span>Food: </span>$250.00</li>
+            <li><span>Restaurants: </span>$140.00</li>
+            <li><span>Car: </span>$130.00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
